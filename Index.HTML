@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="savename()">save name</button>
+    <button onclick="showname()">show name</button>
+    <p id="displayname"></p>
+    <script>
+function savename(){
+let name =document.getElementById("name").value;
+localStorage.setItem("username",name);
+alert("name save!");
+}
+function showname(){
+let name=localStorage.getItem("username");
+if(name){
+    document.getElementById("displayname").innerText="Store Name:"+ name;
+}
+else{
+    document.getElementById("displayname").innerText="no name store:";
+}
+}
+</script>
+16/06/24
+<!-- <script>
+const age=25;
+console.log(age);
+var x=10;
+if (false){
+    var x=20;
+    console.log(x);
+}
+console.log(x);
+function testvar(){
+    if (true){
+        var x=10;
+        console.log(x);
+    }
+    
+}
+let number=10;
+if (number>0){
+    console.log("The number is positive");
+}
+for (let i= 1;i<=10;i++){
+    console.log(i);
+}
+let fruits=["apple","mango","orange"];
+for (let i=0; i< fruits.length; i++){
+    console.log(fruits[i]);
+}
+let isavailable=false;
+if (!isavailable){
+    console.log("The variable isavailable is false");
+    
+}
+let char='e';
+if(char==='a'|| char==='e'|| char==='i'|| char==='o' ||char==='u'){
+    console.log("the character is a vowel");
+}
+else{
+    console.log("the character is not a vowel")
+}
+let score ='F';
+if(score==='A'){
+    console.log("Exellent");
+}
+else if(score==='B'){
+    console.log("Good");
+}
+else if(score==='C'){
+    console.log("Average");
+}
+else if(score==='F'){
+    console.log("Fail")
+}
+</script> -->
+01/07/24
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

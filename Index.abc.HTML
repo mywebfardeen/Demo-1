@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Day Mode Styles */
+body.day-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Night Mode Styles */
+body.night-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+</style>
+<body>
+    <button id="toggle-button">Toggle Night Mode</button>
+  <script>
+      const toggleButton = document.getElementById('toggle-button');
+const body = document.body;
+
+if (localStorage.getItem('nightMode') === 'enabled') {
+    body.classList.add('night-mode');
+}
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('night-mode');
+
+    if (body.classList.contains('night-mode')) {
+        localStorage.setItem('nightMode', 'enabled');
+    } else {
+        localStorage.setItem('nightMode', 'disabled');
+    }
+});
+
+    </script>
+  
+</body>
+</html>
